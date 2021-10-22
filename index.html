@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Databse</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form class="form-data" onsubmit="event.preventDefault();onformSubmit()">
+              <div>
+                  <label>Project Name</label>
+                  <input type="text" name="fullname" id="fullname" placeholder="Enter Name of Project" required>
+              </div>
+              
+              <div>
+                <label>Start Date</label>
+                <input type="date" name="date" id="date" required>
+              </div>
+              
+              <div>
+                <label>Status</label>
+                <input type="text" placeholder="Enter Status of Project Completed or Pending" name="status" id="status" required>
+              </div>
+
+              <div>
+                <label>Team Members</label>
+                <input type="number" placeholder="Enter no of teammates" name="teammembers" id="teammembers" required>
+              </div>
+
+              
+              <div>
+        
+                  <label>Progress </label> 
+                  <input type="number" placeholder="Enter Progess in percent" name="progess" id="progress" required>
+                
+               
+              </div>
+              
+              <div>
+                <button class="submit">Submit</button>
+              </div>
+
+              
+          </form>
+        </div>
+      
+      </div>
+    <div class="container">
+      <div class="database-box">
+      <div class="database-header">
+        <div class="search-box">
+          <label>Search</label>
+          <div>
+            <input onkeyup="filter()" id="search-input" type="text" >
+            <button><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+      </div>
+        <div class="database-table-box">
+            <table class="list" id="projectfields">
+                <thead>
+                    <tr>
+                        <td>S.no</td>
+                        <td>Project</td>
+                        <td>Start Date</td>
+                        <td>Status</td>
+                        <td>Team Members</td>
+                        <td>Progress</td>
+                        <td>Action</td>
+                    </tr>
+
+                </thead>
+                <tbody id="tabledata">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="7"><button class="addnewproject" id="addnewproject" >Add new Project</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
